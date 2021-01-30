@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 function Home() {
    return <div>
-      <h1>My Recipes</h1>
-      <p>Estou aprendendo next.js para desenvolver um livro de receitas</p>
+      <h1>Alfarrábio Gourmet</h1>
+      <p>Gestor de receitas</p>
       <Contador />
    </div>
 }
