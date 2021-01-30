@@ -1,26 +1,27 @@
-import { useState } from 'react';
+// pages/index.js
+import { signIn, signOut, useSession } from 'next-auth/client'
 
-function Home() {
-   return <div>
-      <h1>Alfarrábio Gourmet</h1>
-      <p>Gestor de receitas</p>
-      <Contador />
-   </div>
+export default function Page() {
+  const [session, loading] = useSession()
+
+  if (loading) {
+    return <p>Loading...</p>
+  }
+
+  return (
+    <>
+      {!session && (
+        <>
+          Not signed in <br />
+          <button onClick={signIn}>Sign in</button>
+        </>
+      )}
+      {session && (
+        <>
+          Signed in as {session.user.email} <br />
+          <button onClick={signOut}>Sign out</button>
+        </>
+      )}
+    </>
+  )
 }
-
-function Contador() {
-   const [contador, setContador] = useState(1);
-
-   function adicionarContador() {
-      setContador(contador+1);
-   }
-
-   return (
-      <div>
-         <div>{contador}</div>
-         <button onClick={adicionarContador}>Adicionar</button>
-      </div>
-   )
-}
-
-export default Home
