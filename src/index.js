@@ -4,4 +4,5 @@ const app = express();
 
 app.get("/", (resquest, response)=> {return response.json({message: "Hello Marcelo!"})})
 
-app.listen(3333)
+const port = process.env.PORT || 3000;
+app.listen(port)
