@@ -1,29 +1,15 @@
 {
-  "name": "recipes",
+  "name": "ignite-node",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev"
+  "license": "MIT",
+  "scripts":{
+    "dev": "nodemon src/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cairuga/recipes.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cairuga/recipes/issues"
-  },
-  "homepage": "https://github.com/cairuga/recipes#readme",
   "dependencies": {
-    "mysql": "^2.18.1",
-    "next": "^10.0.5",
-    "next-auth": "^3.1.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "typeorm": "^0.2.30"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
